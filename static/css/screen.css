@@ -1,3 +1,34 @@
+@font-face {
+  font-family: "Dancing Script";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/extra-fonts/DancingScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "League Spartan";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/extra-fonts/LeagueSpartan-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amatic";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/extra-fonts/AmaticSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amatic";
+  font-weight: bold;
+  src: url("/extra-fonts/AmaticSC-Bold.ttf") format("truetype");
+}
+
+
+
+
+
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
@@ -17,6 +48,23 @@
     10. Media Queries (Mobile)
 
  */
+
+/* Sort out colors */
+
+/* pinkish: #b1273c; */
+
+:root {
+  --button-color: #fad7b0;
+  --button-hover-color: #d19d61;
+  --background-color: #fad7b0;
+  --footer-background-color: #a80202;
+  --navigation-hover-color: #814500;
+  --navigation-active-color: #b34141;
+  --tooltip-arrow-color: #a80202;
+
+}
+
+
 
 /* ==========================================================================
    0. Includes - Ground zero
@@ -120,7 +168,9 @@ a.fa {
   clear: both;
 }
 h1,
-h2,
+h2 {
+  font-family: "Dancing Script";
+},
 h3,
 h4,
 h5,
@@ -180,17 +230,17 @@ a {
 }
 
 a:hover {
-  color: #86c440;
+  color: #764c12;
 }
 
 a.btn {
   text-decoration: none;
-  background-color: #9fd067;
+  background-color: var(--button-color);
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  color: white;
+  -webkit-border-radius: 10px;
+  color: black;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   margin: 0;
   overflow: visible;
@@ -200,11 +250,11 @@ a.btn {
   cursor: pointer;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  font-weight: lighter;
+  /* font-weight: bold; */
 }
 
 a.btn:hover {
-  background: #86c440;
+  background: var(--button-hover-color);
 }
 
 #header-arrow {
@@ -261,8 +311,8 @@ blockquote {
   box-sizing: border-box;
   margin: 1em 0 1em -2.2em;
   padding: 0 0 0 1em;
-  /*border-left: #4a4a4a 0.4em solid;*/
-  font-weight: lighter;
+  border-left: #a80202 0.4em solid;
+  /* font-weight: lighter; */
 }
 
 blockquote p {
@@ -473,12 +523,20 @@ ul li {
   margin-bottom: 0rem;
   text-align: center;
   color: #fff;
-  background: #b80135 no-repeat center center;
+  background: #764c12 no-repeat center center;
   background-size: cover;
 }
 
 #site-head:after {
 }
+
+/* Headshot in the landing page */
+
+#headshot img {
+  max-width: 10%;
+  width: 10%;
+}
+
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
 #blog-logo img {
@@ -501,16 +559,17 @@ ul li {
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
   margin: 10px 0 10px 0;
-  font-size: 5rem;
-  letter-spacing: -1px;
+  font-family: "Dancing Script", serif;
+  font-size: 6rem;
+  /* letter-spacing: -1px; */
 }
 
 .blog-description {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   line-height: 1.5em;
   font-weight: 400;
-  font-family: "Roboto Slab", serif;
+  font-family: "League Spartan", sans-serif;
   letter-spacing: 0;
 }
 
@@ -521,8 +580,8 @@ ul li {
   position: relative;
 }
 .post-holder.odd {
-  background: #b80135;
-  color: white;
+  background: var(--background-color);
+  color: black;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -557,16 +616,16 @@ ul li {
 a.fn-item {
   display: block;
   cursor: pointer;
-  opacity: 0.7;
+  /* opacity: 1; */
 }
 .white {
   color: white;
 }
 a.fn-item:hover {
-  color: #9fd067;
+  color: var(--navigation-hover-color);
 }
 a.fn-item.active {
-  color: #86c440;
+  color: var(--navigation-active-color);
   opacity: 1;
 }
 
@@ -659,6 +718,8 @@ a.fn-item.active {
   font-size: 1.4rem;
   line-height: 1.5em;
 }
+
+
 
 /* ==========================================================================
       5. Single Post - When you click on an individual post
@@ -811,9 +872,9 @@ a.fn-item.active {
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   line-height: 1.5em;
-  color: #bbc7cc;
+  color: #ffffff;
   text-align: center;
-  background: #22343a;
+  background: var(--footer-background-color);
 }
 
 .site-footer a {
@@ -900,7 +961,7 @@ a.fn-item.active {
   content: "";
   border-width: 5px 5px 0 5px;
   border-style: solid;
-  border-color: #50585d transparent;
+  border-color: var(--tooltip-arrow-color) transparent;
   display: block;
   position: absolute;
   bottom: -4px;
