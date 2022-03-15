@@ -1064,6 +1064,19 @@ a.fn-item.active {
   .fixed-nav {
     opacity: 1;
     position: fixed;
+    top: 40px;
+    left: 2%;
+    z-index: 99999;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 130%;
+    font-weight: bold;
+  }
+
+  /* .fixed-nav {
+    opacity: 1;
+    position: fixed;
     top: 0px;
     left: 0px;
     z-index: 99999;
@@ -1071,7 +1084,7 @@ a.fn-item.active {
     width: 100%;
     text-align: center;
     padding: 4px;
-  }
+  } */
 
   /* .post-holder {
     padding-top: 20px;
@@ -1097,7 +1110,7 @@ a.fn-item.active {
 
   #site-head {
     padding: 10% 0;
-    height: 95%;
+    height: 98%;
   }
   #header-arrow {
     display: none;
