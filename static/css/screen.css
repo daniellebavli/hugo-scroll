@@ -1086,6 +1086,13 @@ a.fn-item.active {
     width: 100%;
     text-align: center;
     padding: 4px;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 130%;
+    font-weight: bold;
   }
 
   /* .post-holder {
